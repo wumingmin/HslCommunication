@@ -1044,7 +1044,10 @@ namespace HslCommunication.ModBus
                 }
                 catch(Exception ex)
                 {
+                    state.WorkSocket?.Close( );
+                    state = null;
                     LogNet?.WriteException( LogHeaderText, "Send exception:", ex );
+                    return;
                 }
 
                 
