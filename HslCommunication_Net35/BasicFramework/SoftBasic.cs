@@ -475,7 +475,7 @@ namespace HslCommunication.BasicFramework
                     temp[0] = InBytes[2 * i + 0];
                     temp[1] = InBytes[2 * i + 1];
                 }
-                array[i] = BitConverter.ToInt16( temp, 2 );
+                array[i] = BitConverter.ToInt16( temp, 0 );
             }
 
             return array;
@@ -506,7 +506,7 @@ namespace HslCommunication.BasicFramework
                     temp[0] = InBytes[2 * i + 0];
                     temp[1] = InBytes[2 * i + 1];
                 }
-                array[i] = BitConverter.ToUInt16( temp, 2 );
+                array[i] = BitConverter.ToUInt16( temp, 0 );
             }
 
             return array;
